@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Browser Window Size Display</title>
+      <link rel="stylesheet" href="styles.css" />
+      <script src="script.js" defer></script>
+   </head>
+   <body>
+      <header class="site-header app-header">
+         <h1>Week 6: JavaScript Browser Window Size Display</h1>
+         <p>Resize the browser window to see the width and height update in real time!</p>
+      </header>
+      <main class="site-main window-app" aria-labelledby="app-title">
+         <section class="size-card" aria-live="polite">
+            <h2 id="app-title">Current Window Size</h2>
+            <div class="measurement-grid">
+               <div class="measurement-box">
+                  <span class="measurement-label">Width</span>
+                  <span id="window-width" class="measurement-value">0px</span>
+               </div>
+               <div class="measurement-box">
+                  <span class="measurement-label">Height</span>
+                  <span id="window-height" class="measurement-value">0px</span>
+               </div>
+            </div>
+            <div class="unit-control">
+               <label for="unit-select">Display units:</label>
+               <select id="unit-select">
+                  <option value="px">Pixels</option>
+                  <option value="em">Em</option>
+                  <option value="rem">Rem</option>
+                  <option value="percent">Screen Percentage</option>
+               </select>
+            </div>
+         </section>
+         <section class="article-section app-instructions">
+            <h2>Setup</h2>
+            <p>
+				I reused a previous assignment to cut down on the amount of work necessary. The focus was making everything easily readable.
+			</p>
+            <h2>How it works</h2>
+            <p>
+				This page uses JavaScript to read the browser viewport size with <code>document.documentElement.clientWidth</code> and <code>document.documentElement.clientHeight</code>. A resize event listener updates the display whenever the browser window changes size.
+            </p>
+            <p>
+               <a href="index.html">Return to the original website</a>
+            </p>
+         </section>
+      </main>
+      <footer class="site-footer">
+         <p>2026 Page Footer. All rights reserved.</p>
+      </footer>
+   </body>
+</html>
